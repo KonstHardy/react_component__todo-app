@@ -6,45 +6,42 @@ import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
 
 class App extends Component {
-  state = {
-    posts: [
-      {
-        id: 3,
-        text: " Third task",
-        desc: "State & Props",
-      },
-      {
-        id: 2,
-        text: "Second task",
-        desc: "Create Components",
-      },
-      {
-        id: 1,
-        text: "First task",
-        desc: "Create React App",
-      },
-    ],
-  };
+  constructor(props) {
+    super(props);
 
-  componentDidMount() {
-    // setInterval(() => {
-    //   this.setState({ value: +new Date() });
-    // }, 5000);
+    this.state = {
+      posts: [],
+    };
   }
 
-  // handleRemove = () => {
-  //   this.setState(
-  //     [...this.state.posts].filter((post) => post.id !== this.post.id)
-  //   );
-  // };
+  addPost(valueTitle, valueDesc) {
+    const newPost = {
+      id: new Date(),
+      title: valueTitle,
+      desc: valueDesc,
+    };
+
+    this.state.posts.push(newPost);
+
+    this.setState({ posts: this.state.posts });
+  }
+
+  removePost(id) {
+    this.setState({
+      posts: [...this.state.posts].filter((post) => post.id !== id),
+    });
+  }
 
   render() {
     return (
       <div className="App">
         <div className="App__wrapper">
           <h1 className="App__title">TODO App</h1>
-          <Form />
-          <Posts posts={this.state.posts} />
+          <Form addPost={this.addPost.bind(this)} />
+          <Posts
+            posts={this.state.posts}
+            removePost={this.removePost.bind(this)}
+          />
         </div>
       </div>
     );

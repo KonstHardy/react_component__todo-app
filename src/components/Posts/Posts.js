@@ -5,17 +5,6 @@ import "./Posts.css";
 class Posts extends Component {
   state = {};
 
-  // static getDerivedStateFromProps(props, state) {
-  //   if (state.prevValue === props.value) {
-  //     return null;
-  //   }
-
-  //   return {
-  //     tasks: props.tasks,
-  //     prevValue: props.tasks,
-  //   };
-  // }
-
   render() {
     return (
       <>
@@ -28,11 +17,16 @@ class Posts extends Component {
                 <li className="posts__item" key={post.id}>
                   <div className="posts__body">
                     <div className="posts__title">
-                      <span className="posts__title-text">{post.text}</span>
+                      <span className="posts__title-text">{post.title}</span>
                     </div>
                     <p className="posts__desc">{post.desc}</p>
                   </div>
-                  <button className="btn__remove">
+                  <button
+                    className="btn__remove"
+                    onClick={() => {
+                      this.props.removePost(post.id);
+                    }}
+                  >
                     <span className="btn__line"></span>
                     <span className="btn__line"></span>
                   </button>
