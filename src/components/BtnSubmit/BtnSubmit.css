@@ -1,0 +1,47 @@
+.btn__submit {
+  position: relative;
+  display: block;
+  width: 215px;
+  height: 55px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #a7a7a7;
+  outline: none;
+  cursor: pointer;
+  color: #000;
+  background: #61dafb;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45);
+  transition: color 0.1s linear, letter-spacing 0.1s linear,
+    transform 0.1s linear;
+}
+.btn__submit::before,
+.btn__submit::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border-radius: 5px;
+  background: #f30085;
+}
+.btn__submit:hover {
+  border: none;
+  color: #fff;
+  letter-spacing: 1px;
+  transform: scale(1.04);
+}
+.btn__submit::after {
+  height: 0;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  transition: all 0.2s;
+}
+.btn__submit:hover::after {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}

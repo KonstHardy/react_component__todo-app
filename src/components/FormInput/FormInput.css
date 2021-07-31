@@ -1,0 +1,22 @@
+.form__input {
+  width: 330px;
+  height: 33px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+.form__input {
+  border-radius: 8px;
+  border: 1px solid #a7a7a7;
+  outline: none;
+  cursor: pointer;
+  color: #202020;
+  background: #fffbfb;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s linear, box-shadow 0.15s linear;
+}
+.form__input:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px 0 rgb(255, 251, 251, 0.35);
+}
