@@ -2,6 +2,7 @@ import { Component } from "react";
 
 import "./Posts.css";
 
+import Subtitle from "../Subtitle/Subtitle";
 import Post from "../Post/Post";
 
 class Posts extends Component {
@@ -10,8 +11,7 @@ class Posts extends Component {
   render() {
     return (
       <>
-        <h2 className="posts__subtitle subtitle">List of posts:</h2>
-
+        <Subtitle message="List of posts:" />
         <ul className="posts__list list">
           {this.props.posts.length ? (
             this.props.posts.map((post) => {

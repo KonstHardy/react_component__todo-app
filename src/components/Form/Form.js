@@ -2,6 +2,7 @@ import { Component } from "react";
 
 import "./Form.css";
 
+import Subtitle from "../Subtitle/Subtitle";
 import FormInput from "../FormInput/FormInput";
 import BtnSubmit from "../BtnSubmit/BtnSubmit";
 
@@ -29,7 +30,7 @@ class Form extends Component {
   render() {
     return (
       <>
-        <h2 className="subtitle">Your post:</h2>
+        <Subtitle message="Your post:" />
         <form className="form" onSubmit={this.handleSubmit}>
           <FormInput
             name="title"
