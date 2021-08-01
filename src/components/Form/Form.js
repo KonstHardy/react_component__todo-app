@@ -22,8 +22,7 @@ class Form extends Component {
     if (this.state.title !== "" && this.state.description !== "") {
       this.props.addPost(this.state.title, this.state.description);
 
-      this.state.title = "";
-      this.state.description = "";
+      this.setState({ title: "", description: "" });
     }
   };
 
