@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import "./App.css";
+import styles from "./App.module.css";
 
 import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
@@ -34,9 +34,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App__wrapper">
-          <h1 className="App__title">TODO App</h1>
+      <div className={styles.App}>
+        <div className={styles.App__wrapper}>
+          <h1 className={styles.App__title}>TODO App</h1>
           <Form addPost={this.addPost.bind(this)} />
           <Posts
             posts={this.state.posts}

@@ -1,11 +1,11 @@
 import { Component } from "react";
 
-import "./BtnSubmit.css";
+import styles from "./BtnSubmit.module.css";
 
 class BtnSubmit extends Component {
   render() {
     return (
-      <button className="btn__submit" type="submit">
+      <button className={styles.btn__submit} type="submit">
         Add Task
       </button>
     );

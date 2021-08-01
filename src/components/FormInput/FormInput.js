@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import "./FormInput.css";
+import styles from "./FormInput.module.css";
 
 class FormInput extends Component {
   shouldComponentUpdate(nextProps) {
@@ -11,7 +11,7 @@ class FormInput extends Component {
     return (
       <div>
         <input
-          className="form__input"
+          className={styles.form__input}
           type="text"
           autoComplete="off"
           {...this.props}

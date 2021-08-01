@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import "./Posts.css";
+import styles from "./Posts.module.css";
 
 import Subtitle from "../Subtitle/Subtitle";
 import Post from "../Post/Post";
@@ -12,7 +12,7 @@ class Posts extends Component {
     return (
       <>
         <Subtitle message="List of posts:" />
-        <ul className="posts__list list">
+        <ul className={styles.posts__list}>
           {this.props.posts.length ? (
             this.props.posts.map((post) => {
               return (
@@ -24,7 +24,7 @@ class Posts extends Component {
               );
             })
           ) : (
-            <p className="emptyPostsList">
+            <p className={styles.emptyPostsList}>
               Here are no comments. Write the first post.
             </p>
           )}

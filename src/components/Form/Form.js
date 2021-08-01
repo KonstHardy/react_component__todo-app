@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import "./Form.css";
+import styles from "./Form.module.css";
 
 import Subtitle from "../Subtitle/Subtitle";
 import FormInput from "../FormInput/FormInput";
@@ -31,7 +31,7 @@ class Form extends Component {
     return (
       <>
         <Subtitle message="Your post:" />
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className={styles.form} onSubmit={this.handleSubmit}>
           <FormInput
             name="title"
             value={this.state.title}
