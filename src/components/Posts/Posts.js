@@ -25,7 +25,7 @@ class Posts extends Component {
             })
           ) : (
             <p className={styles.emptyPostsList}>
-              Here are no comments. Write the first post.
+              Here are no posts. Write the first post.
             </p>
           )}
         </ul>

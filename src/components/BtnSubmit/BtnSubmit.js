@@ -6,7 +6,7 @@ class BtnSubmit extends Component {
   render() {
     return (
       <button className={styles.btn__submit} type="submit">
-        Add Task
+        Add Post
       </button>
     );
   }
