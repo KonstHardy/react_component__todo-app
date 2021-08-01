@@ -2,6 +2,8 @@ import { Component } from "react";
 
 import "./Posts.css";
 
+import Post from "../Post/Post";
+
 class Posts extends Component {
   state = {};
 
@@ -14,23 +16,11 @@ class Posts extends Component {
           {this.props.posts.length ? (
             this.props.posts.map((post) => {
               return (
-                <li className="posts__item" key={post.id}>
-                  <div className="posts__body">
-                    <div className="posts__title">
-                      <span className="posts__title-text">{post.title}</span>
-                    </div>
-                    <p className="posts__desc">{post.desc}</p>
-                  </div>
-                  <button
-                    className="btn__remove"
-                    onClick={() => {
-                      this.props.removePost(post.id);
-                    }}
-                  >
-                    <span className="btn__line"></span>
-                    <span className="btn__line"></span>
-                  </button>
-                </li>
+                <Post
+                  key={post.id}
+                  post={post}
+                  removePost={this.props.removePost}
+                />
               );
             })
           ) : (
