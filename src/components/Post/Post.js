@@ -1,20 +1,22 @@
-import { Component, createRef } from "react";
+import { Component } from "react";
 
 import styles from "./Post.module.css";
 
 class Post extends Component {
-  btnRemove = createRef();
-
   handleRemove = () => {
     this.props.removePost(this.props.post.id);
   };
 
   componentDidMount() {
-    this.btnRemove.current.addEventListener("click", this.handleRemove);
+    document
+      .getElementById("remove")
+      .addEventListener("click", this.handleRemove);
   }
 
   componentWillUnmount() {
-    this.btnRemove.current.removeEventListener("click", this.handleRemove);
+    document
+      .getElementById("remove")
+      .removeEventListener("click", this.handleRemove);
   }
 
   render() {
@@ -24,7 +26,7 @@ class Post extends Component {
           <p className={styles.post__title}> {this.props.post.title}</p>
           <p className={styles.post__desc}>{this.props.post.description}</p>
         </div>
-        <button className={styles.btn__remove} ref={this.btnRemove}>
+        <button id="remove" className={styles.btn__remove}>
           <span className={styles.btn__line}></span>
           <span className={styles.btn__line}></span>
         </button>
