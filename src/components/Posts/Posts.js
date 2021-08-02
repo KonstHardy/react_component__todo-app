@@ -7,7 +7,7 @@ import Post from "../Post/Post";
 
 class Posts extends Component {
   render() {
-    const posts = this.props.posts;
+    const { posts } = this.props;
 
     return (
       <>
