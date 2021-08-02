@@ -1,4 +1,4 @@
-.subtitle {
-  color: #61dafb;
+.root {
+  color: var(--color-blue);
   text-decoration: underline;
 }

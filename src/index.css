@@ -12,8 +12,20 @@ code {
     monospace;
 }
 
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+:root {
+  --color-blue: #61dafb;
+
+  --color-text: #202020;
+  --color-border: #a7a7a7;
+
+  --color-activeAdd: #f30085;
+  --color-activeRemove: #e9205cf5;
+
+  --color-boxShadow: rgba(0, 0, 0, 0.5);
+  --color-boxShadowHover: rgb(255, 251, 251, 0.35);
+
+  --color-bgApp: #282c34;
+  --color-bgPost: #eaeaea;
+  --color-bgField: #fffbfb;
+  --color-bgRemove: #8993ad;
 }

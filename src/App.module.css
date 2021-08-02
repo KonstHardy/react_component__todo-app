@@ -1,15 +1,15 @@
-.App {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
+  background-color: var(--color-bgApp);
 }
-.App__wrapper {
+.appWrapper {
+  width: 600px;
   padding: 5rem 1.5rem;
   margin: 0 auto;
-  width: 600px;
 }
-.App__title {
+.appTitle {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 5rem;
-  text-align: center;
-  color: #61dafb;
+  color: var(--color-blue);
 }

@@ -20,7 +20,13 @@ class Form extends Component {
     event.preventDefault();
 
     if (this.state.title !== "" && this.state.description !== "") {
-      this.props.addPost(this.state.title, this.state.description);
+      const newPost = {
+        id: Date.now(),
+        title: this.state.title,
+        description: this.state.description,
+      };
+
+      this.props.addPost(newPost);
 
       this.setState({ title: "", description: "" });
     }

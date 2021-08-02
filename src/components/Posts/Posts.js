@@ -6,15 +6,15 @@ import Subtitle from "../Subtitle/Subtitle";
 import Post from "../Post/Post";
 
 class Posts extends Component {
-  state = {};
-
   render() {
+    const posts = this.props.posts;
+
     return (
       <>
         <Subtitle message="List of posts:" />
-        <ul className={styles.posts__list}>
-          {this.props.posts.length ? (
-            this.props.posts.map((post) => {
+        <ul className={styles.postsList}>
+          {posts.length ? (
+            posts.map((post) => {
               return (
                 <Post
                   key={post.id}
