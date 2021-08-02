@@ -10,24 +10,21 @@ class App extends Component {
     posts: [],
   };
 
-  addPost = this.addPost.bind(this);
-  removePost = this.removePost.bind(this);
-
-  addPost(newPost) {
+  addPost = (newPost) => {
     this.setState((prevState) => {
       return {
         posts: prevState.posts.concat(newPost),
       };
     });
-  }
+  };
 
-  removePost(id) {
+  removePost = (id) => {
     this.setState((prevState) => {
       return {
         posts: prevState.posts.filter((post) => post.id !== id),
       };
     });
-  }
+  };
 
   render() {
     return (
