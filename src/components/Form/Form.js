@@ -19,7 +19,10 @@ class Form extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    if (this.state.title !== "" && this.state.description !== "") {
+    if (
+      this.state.title.trim() !== "" &&
+      this.state.description.trim() !== ""
+    ) {
       const newPost = {
         id: Date.now(),
         title: this.state.title,
