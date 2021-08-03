@@ -7,18 +7,6 @@ class Post extends Component {
     this.props.removePost(this.props.post.id);
   };
 
-  componentDidMount() {
-    document
-      .getElementById("remove")
-      .addEventListener("click", this.handleRemove);
-  }
-
-  componentWillUnmount() {
-    document
-      .getElementById("remove")
-      .removeEventListener("click", this.handleRemove);
-  }
-
   render() {
     return (
       <li className={styles.post__item}>
@@ -26,7 +14,7 @@ class Post extends Component {
           <p className={styles.post__title}> {this.props.post.title}</p>
           <p className={styles.post__desc}>{this.props.post.description}</p>
         </div>
-        <button id="remove" className={styles.btn__remove}>
+        <button className={styles.btn__remove} onClick={this.handleRemove}>
           <span className={styles.btn__line}></span>
           <span className={styles.btn__line}></span>
         </button>
