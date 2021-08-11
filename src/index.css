@@ -13,10 +13,13 @@ code {
 }
 
 :root {
+  --color-black: #000;
+  --color-white: #fff;
   --color-blue: #61dafb;
 
   --color-text: #202020;
-  --color-border: #a7a7a7;
+  --color-border: #2e3238;
+  --color-postsEmpty: #c1c1c1;
 
   --color-activeAdd: #f30085;
   --color-activeRemove: #e9205cf5;
@@ -24,8 +27,8 @@ code {
   --color-boxShadow: rgba(0, 0, 0, 0.5);
   --color-boxShadowHover: rgb(255, 251, 251, 0.35);
 
-  --color-bgApp: #282c34;
-  --color-bgPost: #eaeaea;
-  --color-bgField: #fffbfb;
-  --color-bgRemove: #8993ad;
+  --color-bgApp: #3c424a;
+  --color-bgPost: #d3d3d3;
+  --color-bgField: #6e7373;
+  --color-bgRemove: #6e7373;
 }

@@ -4,5 +4,5 @@
   padding: 0;
 }
 .emptyPostsList {
-  color: var(--color-bgField);
+  color: var(--color-postsEmpty);
 }

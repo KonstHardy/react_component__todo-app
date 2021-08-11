@@ -1,20 +1,21 @@
 .form__input {
-  width: 330px;
+  width: 360px;
   height: 33px;
   padding: 10px 16px;
   margin-bottom: 20px;
-  font-size: 14px;
-  letter-spacing: 1.3px;
-}
-.form__input {
   border-radius: 8px;
   border: 1px solid var(--color-border);
+  font-size: 15px;
+  letter-spacing: 1.3px;
   outline: none;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--color-white);
   background: var(--color-bgField);
   box-shadow: 2px 2px 5px var(--color-boxShadow);
   transition: transform 0.1s linear, box-shadow 0.15s linear;
+}
+.form__input::placeholder {
+  color: var(--color-white);
 }
 .form__input:hover {
   transform: scale(1.02);
