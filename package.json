@@ -2,7 +2,7 @@
   "name": "react_component__todo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://konsthardy.github.io/react_component__todo-app/",
+  "homepage": "https://konsthardy.github.io/todo-app__react_component/",
   "author": "KonstHardy",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
