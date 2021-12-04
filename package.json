@@ -1,6 +1,7 @@
 {
   "name": "react_component__todo-app",
   "version": "0.1.0",
+  "description": "Web App is built on top of React.Component allows to create and remove posts",
   "private": true,
   "homepage": "https://konsthardy.github.io/todo-app__react_component/",
   "author": "KonstHardy",
